@@ -41,11 +41,10 @@ hbs.registerHelper('screamIt', (text) => {
 
 app.get('/', (req, res) => {
 	res.render('home.hbs', {
-		pageTitle: 'Home Page',
+		pageTitle: 'Basic Node Website',
 		welcomeMessage: 'Hey! Welcome!'
 	});
 });
-
 
 app.listen(port, () => {
   console.log(`Started on port ${port}`);
