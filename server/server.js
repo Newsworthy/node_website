@@ -65,6 +65,10 @@ app.get('/blog', (req, res) => {
 //
 // })
 
+app.all('*', function(req, res) {
+  res.render("error.hbs");
+});
+
 app.listen(port, () => {
   console.log(`Started on port ${port}`);
 });
