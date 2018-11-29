@@ -59,6 +59,12 @@ app.get('/blog', (req, res) => {
 	res.render('blog.hbs');
 });
 
+// Getting Blog post by ID soon
+
+// // app.get('/blog/:id', (req, res) => {
+//
+// })
+
 app.listen(port, () => {
   console.log(`Started on port ${port}`);
 });

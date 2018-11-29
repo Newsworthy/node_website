@@ -1,3 +1,3 @@
-# bookings
+# node_website
 
-Purely an attempt to make my google calendar easier
+Taking my old website, and merging it into my attempt at a Node based website
