@@ -56,7 +56,12 @@
 	        <span id="content">
 	            <div class="row">
 	                <div class="container col-md-12">
-										<button class="collapsible">Cameras</button>
+										{{# each categories}}
+										<button class="collapsible">{{ this.categories }}</button>
+										<div class="content">
+											<p><li><a href="">{{ this.category.title }}</a></li></p>
+										{{/each}}
+										<!-- <button class="collapsible">Cameras</button>
 										<div class="content">
 											<p><li><a href="">Canon 5D Mark II</a></li>
 												<li><a href="">GoPro 5 Hero Black</a></li>
@@ -73,7 +78,10 @@
 											</p></div>
 											<button class="collapsible">Lighting</button>
 											<div class="content">
-												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+												<p>{{# each items}}
+												<li><a href="">{{ this.title }}</a></li>
+												{{/each}}
+											</p>
 											</div>
 											<button class="collapsible">Audio</button>
 											<div class="content">
@@ -82,7 +90,7 @@
 											<button class="collapsible">Miscellaneous</button>
 											<div class="content">
 												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-											</div>
+											</div> -->
 	                	</div>
 	            	</div>
 	            	<hr>
