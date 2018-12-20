@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 
 mongoose.Promise = global.Promise;
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/Website', { useNewUrlParser: true });
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://ds139934.mlab.com:39934/heroku_xt27cj1b', { useNewUrlParser: true });
 
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));

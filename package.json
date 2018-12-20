@@ -1,10 +1,9 @@
 {
-  "name": "bookings",
+  "name": "website2019",
   "version": "1.0.0",
   "description": "Attempting to create my website in Node & Mongo",
   "main": "server.js",
   "scripts": {
-    "start": "server/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
