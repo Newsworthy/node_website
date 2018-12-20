@@ -51,7 +51,7 @@ app.get('/about', (req, res) => {
 
 app.get('/equipment', (req, res, next) => {
 	Item.find(function(err, item) {
-		res.render('equipment.hbs', { categories: item });
+		res.render('equipment.hbs', { category: item });
 	});
 
 });
@@ -67,21 +67,28 @@ app.get('/blog', (req, res) => {
 // POST ROUTES
 
 app.post('/equipment', (req, res) => {
-	console.log("Post command received");
-	console.log(req.body);
+	// console.log("Post command received");
+	// console.log("This is the category: " + req.body.category);
+	// console.log("This is the title: " + req.body.product.title);
+	// console.log("This is the quantity: " + req.body.product.quantity);
+	// console.log("This is the description: " + req.body.product.description);
+
 	var item = new Item({
-		title: req.body.title,
-		quantity: req.body.quantity,
 		category: req.body.category,
-		description: req.body.description
+		"product.title": req.body.product.title,
+		quantity: req.body.product.quantity,
+		"product.description": req.body.product.description
 	});
+	// console.log(item);
 
 	item.save().then((doc) => {
+		// console.log(doc);
 		res.send(doc);
 	}, (e) => {
 		res.status(400).send(e);
 	});
 });
+
 
 // Getting Blog post by ID soon
 

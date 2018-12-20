@@ -56,11 +56,15 @@
 	        <span id="content">
 	            <div class="row">
 	                <div class="container col-md-12">
-										{{# each categories}}
-										<button class="collapsible">{{ this.categories }}</button>
+
+										<button class="collapsible">Lighting</button>
+
+
 										<div class="content">
-											<p><li><a href="">{{ this.category.title }}</a></li></p>
+										{{# each category }}
+											<p><li><a href="">{{ this.product.title }}</a></li></p>
 										{{/each}}
+
 										<!-- <button class="collapsible">Cameras</button>
 										<div class="content">
 											<p><li><a href="">Canon 5D Mark II</a></li>
