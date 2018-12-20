@@ -84,6 +84,7 @@ app.post('/equipment', (req, res) => {
 	item.save().then((doc) => {
 		// console.log(doc);
 		res.send(doc);
+		console.log("Product sent");
 	}, (e) => {
 		res.status(400).send(e);
 	});
